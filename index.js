@@ -37,4 +37,108 @@ function squareSum(numbers){
   }
 
 
+  // 6 kyu - The Supermarket Queue
+
+  function queueTime(customers, n) {
+
+    //TODO
+    let result = []
+    
+    for(let i = 0; i< n; i++){
+      result.push(0)
+    }
+  for (let customer of customers){
+    result[0] += customer
+      // always add to the first tile so that the lowest number is always first 
+    result.sort((a,b) => a-b)
+    console.log(result)
+  }
+  // resturn the last index 
+    return result[result.length-1]
+  }
+
+
+  // Decode the Morse code
+
+  decodeMorse = function(morseCode){
+
+  //your code here
+const MORSE_CODE = { 
+    '-.-.--': '!',
+    '.-..-.': '"',
+    '...-..-': '$',
+    '.-...': '&',
+    '.----.': '\'',
+    '-.--.': '(',
+    '-.--.-': ')',
+    '.-.-.': '+',
+    '--..--': ',',
+    '-....-': '-',
+    '.-.-.-': '.',
+    '-..-.': '/',
+    '-----': '0',
+    '.----': '1',
+    '..---': '2',
+    '...--': '3',
+    '....-': '4',
+    '.....': '5',
+    '-....': '6',
+    '--...': '7',
+    '---..': '8',
+    '----.': '9',
+    '---...': ':',
+    '-.-.-.': ';',
+    '-...-': '=',
+    '..--..': '?',
+    '.--.-.': '@',
+    '.-': 'A',
+    '-...': 'B',
+    '-.-.': 'C',
+    '-..': 'D',
+    '.': 'E',
+    '..-.': 'F',
+    '--.': 'G',
+    '....': 'H',
+    '..': 'I',
+    '.---': 'J',
+    '-.-': 'K',
+    '.-..': 'L',
+    '--': 'M',
+    '-.': 'N',
+    '---': 'O',
+    '.--.': 'P',
+    '--.-': 'Q',
+    '.-.': 'R',
+    '...': 'S',
+    '-': 'T',
+    '..-': 'U',
+    '...-': 'V',
+    '.--': 'W',
+    '-..-': 'X',
+    '-.--': 'Y',
+    '--..': 'Z',
+    '..--.-': '_',
+    '...---...': 'SOS'
+  }
   
+  return morseCode
+      .split('   ')
+      .map(
+        a => a
+          .split(' ')
+          .map(
+            b => MORSE_CODE[b]
+          ).join('')
+      ).join(' ').trim();
+  }
+    
+
+  //7 kyu Two Oldest Ages
+  // return the two oldest/oldest ages within the array of ages passed in.
+function twoOldestAges(ages){
+  
+    let sortedA= ages.sort(function (a, b) {  return a - b;  }); 
+    
+      return sortedA.slice(-2)
+  
+  }
