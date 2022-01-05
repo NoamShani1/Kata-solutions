@@ -159,3 +159,15 @@ function twoOldestAges(ages){
     })
     return count
   }
+
+  //  7 kyu Unscrambled eggs
+  function unscrambleEggs(word){
+
+    let newWord = word.replace(/egg/g, '')
+    
+    return newWord
+    
+      
+    }
+    
+
