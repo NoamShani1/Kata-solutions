@@ -191,9 +191,9 @@ function twoOldestAges(ages){
 
   // 6 kyu Which are in?
   function inArray(array1,array2){
-    var x;
-    var y;
-    var r = [];
+    let x;
+    let y;
+    let r = [];
     for (x = 0; x < array1.length; x++) { 
       for (y = 0; y < array2.length; y++) {
         if(array2[y].includes(array1[x]) === true){
@@ -205,4 +205,28 @@ function twoOldestAges(ages){
     }
     r = [...new Set(r)];
     return r.sort();
+    }
+
+
+    //7 kyu The Office II - Boredom Score
+
+    const SCORES = {
+      accounts: 1,
+      finance: 2,
+      canteen: 10,
+      regulation: 3,
+      trading: 6,
+      change: 6,
+      IS: 8,
+      retail: 5,
+      cleaning: 4,
+      'pissing about': 25
+    };
+    
+    function boredom(staff){
+      let val = Object.keys(staff).reduce((acc, cur) => acc + SCORES[staff[cur]], 0);
+        
+      if (val <= 80) return 'kill me now';
+      if (val > 100) return 'party time!!';
+      return 'i can handle this';
     }
