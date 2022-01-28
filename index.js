@@ -230,3 +230,54 @@ function twoOldestAges(ages){
       if (val > 100) return 'party time!!';
       return 'i can handle this';
     }
+
+    
+    // 7 kyu Pandemia 🌡️
+
+    function infected(s) {
+  
+
+ if(s.split('X').join('') === '') return 0
+     let infected = 0;
+    let total = 0;
+
+    if(!s.includes('1') || !s.includes('0')){
+        return 0;
+    }
+
+    s.split('X').forEach(continent => {
+        if(continent.includes('1')){          
+            continent = continent.replace(/0/i, '1');
+            infected += continent.length;
+        }
+        total += continent.length
+    });
+
+    return 100*infected/total;
+};
+
+
+
+// return masked string
+function maskify(cc) {
+
+
+  String.prototype.replaceAt=function(index, char) {
+      let a = this.split('');
+      a[index] = char;
+      return a.join('');
+  }
+  let str = cc
+  for(let i = 0; i<cc.length -4; i++){
+    
+    str = str.replaceAt(i, '#');
+  
+  } 
+  
+    
+    return str
+  
+  }
+  
+  
+  
