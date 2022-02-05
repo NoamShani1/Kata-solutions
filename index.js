@@ -280,4 +280,19 @@ function maskify(cc) {
   }
   
   
-  
+  // 7 kyu - most digits 
+  function findLongest(array){
+    console.log(array)
+   
+   
+   let mostDigits = 0;
+   
+   for (let i = 0; i < array.length; i++) {
+     if (array[i].toString().length > mostDigits.toString().length) {
+       mostDigits = array[i]
+       
+     }
+   }
+   return mostDigits;
+ }
+ 
