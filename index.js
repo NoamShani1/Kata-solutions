@@ -295,4 +295,12 @@ function maskify(cc) {
    }
    return mostDigits;
  }
- 
+
+ // Ordered Count of Characters - 7kyu
+
+ var orderedCount = function (text) {
+  let  letters = text.split("")
+  let uniqe = letters.filter((letter, index) => letters.indexOf(letter) == index)
+   
+   return uniqe.map((letter) => [letter, text.split(letter).length - 1])
+ } 
