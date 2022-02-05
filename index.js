@@ -304,3 +304,23 @@ function maskify(cc) {
    
    return uniqe.map((letter) => [letter, text.split(letter).length - 1])
  } 
+
+ // unlucky days - 7kyu 
+
+ function unluckyDays(year){
+
+  let  date = new Date();
+  let counter = 0;
+  let month;
+
+  for(month=0;month<12;month++)
+  {
+   date.setFullYear(year, month,13);
+      if (date.getDay() == 5)
+      {
+        counter++;
+      }
+  }
+
+  return counter;                            
+}
