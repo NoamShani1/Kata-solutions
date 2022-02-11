@@ -324,3 +324,18 @@ function maskify(cc) {
 
   return counter;                            
 }
+
+
+function nextId(ids){
+ 
+  for (let i = 0;  i < ids.length +1; i++) {
+    // check if number is in array of ID
+    
+    if (!ids.includes(i)){
+      return i
+       }  
+    }
+  }
+  
+  
+  // looop over array, start with zero - check if number exists, if not return that number 
