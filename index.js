@@ -339,3 +339,9 @@ function nextId(ids){
   
   
   // looop over array, start with zero - check if number exists, if not return that number 
+
+  function abbrevName(name){
+
+    return name[0].toUpperCase() + '.' + name[name.indexOf(' ') + 1].toUpperCase()
+    
+  }
