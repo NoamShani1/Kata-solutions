@@ -345,3 +345,26 @@ function nextId(ids){
     return name[0].toUpperCase() + '.' + name[name.indexOf(' ') + 1].toUpperCase()
     
   }
+
+  function gooseFilter (birds) {
+    var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+    
+   const result = birds.filter(function(bird){
+                // if the bird is not contained in the geese array the return true 
+      if (geese.indexOf(bird) === -1){
+     
+          return true 
+        } 
+        return false
+    
+     });
+     return result
+   }
+  
+  
+  
+  
+  
+  gooseFilter(["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]);
+  
+  
