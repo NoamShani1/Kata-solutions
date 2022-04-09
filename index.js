@@ -400,3 +400,15 @@ function accum(s) {
 
   return result.join("-")
 }
+
+
+function longest(words) {
+  
+  let longest = words.sort(
+  function (a, b) {
+      return b.length - a.length;
+  }
+)[0];
+
+return longest.length; //code here
+}
