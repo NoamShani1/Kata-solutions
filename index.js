@@ -436,3 +436,40 @@ function solution(number){
   
   return sumTotal;
 }
+
+// alrernative sol
+function solution(number){
+  
+ 
+  // create variable to hold sum
+  let sum = 0
+  
+  // use for loop to iterate trhough the numbers leading up 
+  
+  for (let i = 0; i < number.length; i++){
+      // check if they are multiple of 3 or 5
+    if (i % 3 == 0){
+      
+      sum+=i
+      
+      continue
+      
+    } else if (i % 5 == 0){
+      
+      sum+=i
+
+      continue
+      
+    } else {
+      
+      continue
+      
+    }
+    
+  }
+
+  // add number if yes
+  // return sum 
+  return sum 
+}
+console.log( solution(10, 23 ))
