@@ -473,3 +473,16 @@ function solution(number){
   return sum 
 }
 console.log( solution(10, 23 ))
+
+
+// Matrices : Making an Alternating Sum.js 
+
+function scoreMatrix(matrix) {
+  let score=0;
+  matrix.map((e,j)=>{
+  if (j%2===0){
+    return e.map((v,i)=>i%2===0?score+=v:score-=v)
+  } else {
+     return e.map((v,i)=>i%2!==0?score+=v:score-=v)
+  }}) 
+  return score; 
