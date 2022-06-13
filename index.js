@@ -486,3 +486,8 @@ function scoreMatrix(matrix) {
      return e.map((v,i)=>i%2!==0?score+=v:score-=v)
   }}) 
   return score; 
+
+
+  function solution(str, ending){
+    return str.endsWith(ending);
+  }
